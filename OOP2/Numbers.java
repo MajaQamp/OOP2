@@ -13,15 +13,13 @@ public class Numbers {
 
 
     public int maxNumber() {
-        for (Integer number : listOfNumbers) {
-        }
+
         Integer max = Collections.max(listOfNumbers);
         return max;
     }
 
     public int minNumber() {
-        for (Integer number : listOfNumbers) {
-        }
+
         Integer min = Collections.min(listOfNumbers);
         return min;
     }
@@ -34,24 +32,23 @@ public class Numbers {
         return sumOfAllNumbers;
     }
 
- /*   public ArrayList<Integer> primeNumbers() {
-        for (int i = 0; i < listOfNumbers.size(); i++) {
-            boolean isPrime = true;
-            for (int j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    isPrime = false;
-                    break;
-                }
+    public void checkPrimeNumber() {
+        for (Integer number : listOfNumbers) {
+            if (isPrimeNumber(number)) {
+                System.out.println(number + " is a prime number");
+            } else {
+                System.out.println((number + " is not a prime number"));
             }
-            if (isPrime)
-                primeNumbers().add(i);
         }
-        return primeNumbers();
-        }
-        */
+    }
 
+    private boolean isPrimeNumber(Integer number) {
+        for (int i = 2; i < number / 2; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 }
-
-
-
